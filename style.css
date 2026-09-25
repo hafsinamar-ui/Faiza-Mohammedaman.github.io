@@ -724,3 +724,369 @@ footer strong {
     gap: 12px;
   }
 }
+/* =========================================
+   HOME PAGE — FINAL DESIGN
+   ========================================= */
+
+.home-page {
+  background: #f7f3ec;
+  color: #10233f;
+  min-height: 100vh;
+}
+
+/* Header */
+.home-page .site-header {
+  background: #fff;
+  min-height: 120px;
+  padding: 22px 7%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-page .brand {
+  justify-self: start;
+  text-decoration: none;
+  color: #10233f;
+}
+
+.home-page .brand span {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  letter-spacing: 8px;
+  line-height: 1;
+}
+
+.home-page .brand small {
+  display: block;
+  margin-top: 8px;
+  font-size: 10px;
+  letter-spacing: 5px;
+}
+
+.home-page .main-nav {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.home-page .main-nav a {
+  position: relative;
+  color: #10233f;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 14px 0;
+}
+
+.home-page .main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  height: 2px;
+  background: #a97b3f;
+}
+
+.home-page .header-button {
+  justify-self: end;
+  border: 1px solid #a97b3f;
+  padding: 15px 24px;
+  color: #8c6735;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: .5px;
+}
+
+/* Hero */
+.home-page .home-hero {
+  min-height: calc(100vh - 120px);
+  background: #f7f3ec;
+}
+
+.home-page .hero-content {
+  min-height: calc(100vh - 120px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, .78fr) 220px;
+}
+
+.home-page .hero-text {
+  padding: 9vh 4vw 5vh 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-page .eyebrow {
+  color: #a97b3f;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 28px;
+}
+
+.home-page .hero-text h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #10233f;
+  font-weight: 400;
+  font-size: clamp(46px, 4.4vw, 74px);
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+  margin: 0 0 28px;
+}
+
+.home-page .hero-description {
+  max-width: 620px;
+  color: #60666d;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.home-page .hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.home-page .button-primary,
+.home-page .button-secondary {
+  min-height: 54px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.home-page .button-primary {
+  background: #b4833f;
+  color: #fff;
+  border: 1px solid #b4833f;
+}
+
+.home-page .button-secondary {
+  background: transparent;
+  color: #10233f;
+  border: 1px solid #a97b3f;
+}
+
+/* Three values */
+.home-page .hero-values {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.home-page .hero-values > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 26px;
+  border-right: 1px solid #ddd4c7;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.home-page .hero-values > div:first-child {
+  padding-left: 0;
+}
+
+.home-page .hero-values > div:last-child {
+  border-right: 0;
+}
+
+.home-page .value-icon {
+  color: #a97b3f;
+  font-size: 24px;
+}
+
+/* Portrait */
+.home-page .hero-photo {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #eee8de;
+}
+
+.home-page .hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* Right panel */
+.home-page .hero-side {
+  background: #fcfaf6;
+  padding: 55px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-page .side-script {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  color: #334158;
+  font-size: 28px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.home-page .side-line {
+  width: 65px;
+  height: 2px;
+  background: #a97b3f;
+  margin: 26px 0 auto;
+}
+
+.home-page .side-quote {
+  color: #4e5661;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 35px;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .home-page .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .home-page .main-nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  .home-page .hero-content {
+    grid-template-columns: 1.15fr .85fr;
+  }
+
+  .home-page .hero-side {
+    display: none;
+  }
+
+  .home-page .hero-text {
+    padding: 65px 6vw;
+  }
+
+  .home-page .hero-text h1 {
+    font-size: clamp(44px, 6vw, 64px);
+  }
+}
+
+/* Phone */
+@media (max-width: 700px) {
+
+  .home-page .site-header {
+    display: flex;
+    flex-direction: column;
+    padding: 28px 22px 20px;
+    gap: 22px;
+  }
+
+  .home-page .brand {
+    text-align: center;
+  }
+
+  .home-page .brand span {
+    font-size: 30px;
+  }
+
+  .home-page .main-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .home-page .main-nav a {
+    font-size: 14px;
+  }
+
+  .home-page .header-button {
+    display: none;
+  }
+
+  .home-page .hero-content {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .home-page .hero-text {
+    padding: 55px 28px 40px;
+    order: 1;
+  }
+
+  .home-page .eyebrow {
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+  }
+
+  .home-page .hero-text h1 {
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1.04;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+
+  .home-page .hero-description {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .home-page .hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .home-page .button-primary,
+  .home-page .button-secondary {
+    padding: 0 14px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .home-page .hero-values {
+    display: grid;
+    gap: 15px;
+    margin-top: 8px;
+  }
+
+  .home-page .hero-values > div {
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+  }
+
+  .home-page .hero-photo {
+    order: 2;
+    width: min(78%, 430px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 10px auto 45px;
+  }
+
+  .home-page .hero-photo img {
+    height: 100%;
+    object-position: center 20%;
+  }
+
+  .home-page .hero-side {
+    display: none;
+  }
+}
